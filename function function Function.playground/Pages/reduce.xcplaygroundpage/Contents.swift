@@ -31,7 +31,8 @@ func flatten<T>(xss: [[T]]) -> [T] {
     return result
 }
 
-flatten(xss: [[1,2], [3,4]])
+
+print(flatten(xss: [[1,2], [3,4]]).reduce(initial: 0, combine:{ $0 + $1}))
 
 struct City {
     let name: String
@@ -67,6 +68,6 @@ func noOpAnyWrong(x: Any) -> Any {
     return 0
 }
 
-infix operator >>> { associativity left }
+
 
 

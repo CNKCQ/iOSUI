@@ -4,5 +4,6 @@
         <page name='filter'/>
         <page name='generic'/>
         <page name='reduce'/>
+        <page name='monad'/>
     </pages>
 </playground>
