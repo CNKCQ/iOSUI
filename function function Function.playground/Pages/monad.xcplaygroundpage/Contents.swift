@@ -8,7 +8,7 @@ let brray = array.map({"NO." + String($0)})
 
 print(brray)
 
-let barr = [[1,2,3], [4,5,6]].flatMap({$0})
+let barr = [[1,2,3], ["4","5","6"]].flatMap({$0})
 
 print(barr)
 
