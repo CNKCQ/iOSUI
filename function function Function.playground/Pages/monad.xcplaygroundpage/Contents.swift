@@ -24,3 +24,5 @@ print(a.map({$0 * 2}))
 print(b.map({$0 + " good"}))
 
 print(a.flatMap({$0 * 2}))
+
+print(["4"].joined(separator: ","))
