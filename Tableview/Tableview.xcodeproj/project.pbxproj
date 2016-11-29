@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C1A08A21DED8F1B001C4FF5 /* MultipleSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A08A11DED8F1B001C4FF5 /* MultipleSelectionController.swift */; };
+		3C1A08A41DED8FE5001C4FF5 /* TextViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1A08A31DED8FE5001C4FF5 /* TextViewCell.swift */; };
 		3CA7EBC01DE2FFE800029F8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA7EBBF1DE2FFE800029F8F /* AppDelegate.swift */; };
 		3CA7EBC21DE2FFE800029F8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA7EBC11DE2FFE800029F8F /* ViewController.swift */; };
 		3CA7EBC51DE2FFE800029F8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CA7EBC31DE2FFE800029F8F /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C1A08A11DED8F1B001C4FF5 /* MultipleSelectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleSelectionController.swift; sourceTree = "<group>"; };
+		3C1A08A31DED8FE5001C4FF5 /* TextViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewCell.swift; sourceTree = "<group>"; };
 		3CA7EBBC1DE2FFE800029F8F /* Tableview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tableview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA7EBBF1DE2FFE800029F8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CA7EBC11DE2FFE800029F8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 				3CA7EBC61DE2FFE800029F8F /* Assets.xcassets */,
 				3CA7EBC81DE2FFE800029F8F /* LaunchScreen.storyboard */,
 				3CA7EBCB1DE2FFE800029F8F /* Info.plist */,
+				3C1A08A11DED8F1B001C4FF5 /* MultipleSelectionController.swift */,
+				3C1A08A31DED8FE5001C4FF5 /* TextViewCell.swift */,
 			);
 			path = Tableview;
 			sourceTree = "<group>";
@@ -138,7 +144,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CA7EBC21DE2FFE800029F8F /* ViewController.swift in Sources */,
+				3C1A08A41DED8FE5001C4FF5 /* TextViewCell.swift in Sources */,
 				3CA7EBC01DE2FFE800029F8F /* AppDelegate.swift in Sources */,
+				3C1A08A21DED8F1B001C4FF5 /* MultipleSelectionController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +310,7 @@
 				3CA7EBD01DE2FFE800029F8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,8 +8,12 @@
 
 import UIKit
 
+enum MultiSelectedStyle {
+    case `default`, checkmark
+}
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+class MultipleSelectionController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var tableView: UITableView!
     let data = ["naiha", "naiha", "naiha", "naiha", "naiha", "naiha"]
     
