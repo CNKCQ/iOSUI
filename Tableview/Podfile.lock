@@ -1,0 +1,15 @@
+PODS:
+  - SnapKit (3.0.2)
+  - SZTextView (1.2.2)
+
+DEPENDENCIES:
+  - SnapKit (~> 3.0.2)
+  - SZTextView
+
+SPEC CHECKSUMS:
+  SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
+  SZTextView: 3a81174dce0710a9ab069bc73a813e6df53b9c82
+
+PODFILE CHECKSUM: 40d21dfaa2e16f633c0680abc5339a213cbe429d
+
+COCOAPODS: 1.2.0.beta.1
