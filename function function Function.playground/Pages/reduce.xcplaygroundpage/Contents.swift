@@ -33,6 +33,7 @@ func flatten<T>(xss: [[T]]) -> [T] {
 
 
 print(flatten(xss: [[1,2], [3,4]]).reduce(initial: 0, combine:{ $0 + $1}))
+print(flatten(xss: [["1","2"], ["3","4"]]).reduce(initial: "", combine:{ $0 + $1}))
 
 struct City {
     let name: String
