@@ -10,6 +10,5 @@ import Foundation
 
 class Food: NSObject {
     var eatable = true
-    var nick = "只是个测试的"
-    
+    var nick = "可以吃吗？"
 }

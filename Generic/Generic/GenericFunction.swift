@@ -15,4 +15,22 @@ class GenericFunction: BaseController {
         eat(food: Rice())
     }
     
+    func findIndex<T: Equatable>(array: [T], valueToFind: T) -> Int? {
+        for (idx, value) in array.enumerated() {
+            if value == valueToFind {
+                return idx
+            }
+        }
+        return nil
+    }
+    override func eat<T : Rice>(food: T) {
+        
+    }
+    func swap<T>(a: inout T, b: inout T) {
+        (a, b) = (b, a)
+    }
+}
+
+struct Bread<T> {
+    let city: T
 }

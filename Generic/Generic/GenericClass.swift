@@ -8,16 +8,16 @@
 
 import Foundation
 
-class GenericClass: BaseGenericClass<Rice> {
+class GenericClass<T: Rice>: BaseGenericClass<T> {
     override func viewDidLoad() {
         super.viewDidLoad()
-        dropped(food: Rice())
     }
     
-    override func dropped(food: Rice) {
+    override func dropped(food: T) {
         super.dropped(food: food)
         print("\(food.name) 能吃吗？\(food.eatable)")
     }
+    
 }
 
 /* 泛型总结：
@@ -26,4 +26,5 @@ class GenericClass: BaseGenericClass<Rice> {
  优点：
  减少冗余代码
  提供的接口灵活
+ 类型安全
 */

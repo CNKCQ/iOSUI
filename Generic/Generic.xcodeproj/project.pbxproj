@@ -18,7 +18,8 @@
 		3C320A3F1DF59D7B007F4A6B /* GenericFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C320A3E1DF59D7B007F4A6B /* GenericFunction.swift */; };
 		3C320A411DF59DE4007F4A6B /* GenericClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C320A401DF59DE4007F4A6B /* GenericClass.swift */; };
 		3C320A431DF5A37C007F4A6B /* BaseGenericClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C320A421DF5A37C007F4A6B /* BaseGenericClass.swift */; };
-		3C320A451DF5BBB4007F4A6B /* good.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C320A441DF5BBB3007F4A6B /* good.swift */; };
+		3C320A471DF64C4F007F4A6B /* SubGenericClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C320A461DF64C4F007F4A6B /* SubGenericClass.swift */; };
+		3C320A491DF64D41007F4A6B /* Porridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C320A481DF64D41007F4A6B /* Porridge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +36,8 @@
 		3C320A3E1DF59D7B007F4A6B /* GenericFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericFunction.swift; sourceTree = "<group>"; };
 		3C320A401DF59DE4007F4A6B /* GenericClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericClass.swift; sourceTree = "<group>"; };
 		3C320A421DF5A37C007F4A6B /* BaseGenericClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseGenericClass.swift; sourceTree = "<group>"; };
-		3C320A441DF5BBB3007F4A6B /* good.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = good.swift; sourceTree = "<group>"; };
+		3C320A461DF64C4F007F4A6B /* SubGenericClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubGenericClass.swift; path = ../SubGenericClass.swift; sourceTree = "<group>"; };
+		3C320A481DF64D41007F4A6B /* Porridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Porridge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,10 +79,11 @@
 				3C320A321DF58181007F4A6B /* BaseController.swift */,
 				3C320A3A1DF58469007F4A6B /* Food.swift */,
 				3C320A3C1DF5851C007F4A6B /* Rice.swift */,
+				3C320A481DF64D41007F4A6B /* Porridge.swift */,
 				3C320A3E1DF59D7B007F4A6B /* GenericFunction.swift */,
+				3C320A461DF64C4F007F4A6B /* SubGenericClass.swift */,
 				3C320A401DF59DE4007F4A6B /* GenericClass.swift */,
 				3C320A421DF5A37C007F4A6B /* BaseGenericClass.swift */,
-				3C320A441DF5BBB3007F4A6B /* good.swift */,
 			);
 			path = Generic;
 			sourceTree = "<group>";
@@ -160,10 +163,11 @@
 			files = (
 				3C320A411DF59DE4007F4A6B /* GenericClass.swift in Sources */,
 				3C320A431DF5A37C007F4A6B /* BaseGenericClass.swift in Sources */,
-				3C320A451DF5BBB4007F4A6B /* good.swift in Sources */,
 				3C320A3D1DF5851C007F4A6B /* Rice.swift in Sources */,
 				3C320A3F1DF59D7B007F4A6B /* GenericFunction.swift in Sources */,
 				3C320A3B1DF58469007F4A6B /* Food.swift in Sources */,
+				3C320A491DF64D41007F4A6B /* Porridge.swift in Sources */,
+				3C320A471DF64C4F007F4A6B /* SubGenericClass.swift in Sources */,
 				3C320A231DF58161007F4A6B /* ViewController.swift in Sources */,
 				3C320A211DF58161007F4A6B /* AppDelegate.swift in Sources */,
 				3C320A331DF58181007F4A6B /* BaseController.swift in Sources */,
@@ -330,6 +334,7 @@
 				3C320A311DF58161007F4A6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

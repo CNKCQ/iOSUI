@@ -18,5 +18,4 @@ class BaseGenericClass<T: Food>: BaseController {
         print("\(food.nick) 可以🌹")
     }
     
-
 }

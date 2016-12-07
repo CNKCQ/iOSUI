@@ -39,7 +39,7 @@ class ViewController: BaseController, UITableViewDelegate, UITableViewDataSource
         if datas[indexPath.row].contains("Function") {
             dest = GenericFunction()
         } else {
-            dest = GenericClass()
+            dest = SubGenericClass()
         }
         navigationController?.pushViewController(dest!, animated: true)
     }
