@@ -25,4 +25,16 @@ print(b.map({$0 + " good"}))
 
 print(a.flatMap({$0 * 2}))
 
+print("a,b*c&d".components(separatedBy: [",","*","&"]))
+
+
 print(["4"].joined(separator: ","))
+
+func test(object: AnyObject) {}
+
+test(object: NSString())
+test(object: NSArray())
+test(object: barr as AnyObject)
+test(object: a as AnyObject)
+test(object: b as AnyObject)
+test(object: ["nihao": "wohao"] as AnyObject)
