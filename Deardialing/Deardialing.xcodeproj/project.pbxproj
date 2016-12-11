@@ -10,6 +10,8 @@
 		0CE372624BF2A8D4D9333E5F /* Pods_Deardialing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D28497CB954C9DB050D97C /* Pods_Deardialing.framework */; };
 		263AE530DF8B7E0CCC9D7C40 /* Pods_Dialkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0785576863807D2327A1013 /* Pods_Dialkit.framework */; };
 		3C1A08A01DED722C001C4FF5 /* Dialkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD72A7C1DED6A27008760C0 /* Dialkit.framework */; };
+		3C72B3CD1DFBD61500DEC065 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C72B3CC1DFBD61500DEC065 /* UIImage+Extension.swift */; };
+		3C72B3CE1DFD189E00DEC065 /* dialing.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3CBA936A1DEC226800B3A99A /* dialing.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3CBA93551DEC224100B3A99A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBA93541DEC224100B3A99A /* AppDelegate.swift */; };
 		3CBA93571DEC224100B3A99A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBA93561DEC224100B3A99A /* ViewController.swift */; };
 		3CBA935A1DEC224100B3A99A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CBA93581DEC224100B3A99A /* Main.storyboard */; };
@@ -18,7 +20,6 @@
 		3CBA936D1DEC226800B3A99A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CBA936C1DEC226800B3A99A /* NotificationCenter.framework */; };
 		3CBA93701DEC226800B3A99A /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBA936F1DEC226800B3A99A /* TodayViewController.swift */; };
 		3CBA93731DEC226800B3A99A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CBA93711DEC226800B3A99A /* MainInterface.storyboard */; };
-		3CBA93771DEC226800B3A99A /* dialing.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3CBA936A1DEC226800B3A99A /* dialing.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3CBA93891DEC3FAE00B3A99A /* CallDirectoryHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBA93881DEC3FAE00B3A99A /* CallDirectoryHandler.swift */; };
 		3CBA938D1DEC3FAE00B3A99A /* calling.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3CBA93861DEC3FAE00B3A99A /* calling.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3CD72A801DED6A27008760C0 /* Dialkit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CD72A7E1DED6A27008760C0 /* Dialkit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -34,7 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3CBA93751DEC226800B3A99A /* PBXContainerItemProxy */ = {
+		3C72B3CF1DFD189E00DEC065 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3CBA93491DEC224100B3A99A /* Project object */;
 			proxyType = 1;
@@ -64,8 +65,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				3CBA93771DEC226800B3A99A /* dialing.appex in Embed App Extensions */,
 				3CBA938D1DEC3FAE00B3A99A /* calling.appex in Embed App Extensions */,
+				3C72B3CE1DFD189E00DEC065 /* dialing.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,6 +90,7 @@
 		2BA8DC30AD561CD5E1F6A553 /* Pods-Deardialing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Deardialing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Deardialing/Pods-Deardialing.debug.xcconfig"; sourceTree = "<group>"; };
 		2EAAE0480A956A39E33CE414 /* Pods-calling.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calling.release.xcconfig"; path = "Pods/Target Support Files/Pods-calling/Pods-calling.release.xcconfig"; sourceTree = "<group>"; };
 		36772BFD9CC5F09B8B12AD8B /* Pods-Dialkit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dialkit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dialkit/Pods-Dialkit.debug.xcconfig"; sourceTree = "<group>"; };
+		3C72B3CC1DFBD61500DEC065 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		3CBA93511DEC224100B3A99A /* Deardialing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Deardialing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CBA93541DEC224100B3A99A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CBA93561DEC224100B3A99A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				3CD72A971DED70EA008760C0 /* Contact.swift */,
 				3CD72A7E1DED6A27008760C0 /* Dialkit.h */,
 				3CD72A7F1DED6A27008760C0 /* Info.plist */,
+				3C72B3CC1DFBD61500DEC065 /* UIImage+Extension.swift */,
 			);
 			path = Dialkit;
 			sourceTree = "<group>";
@@ -295,9 +298,9 @@
 			buildRules = (
 			);
 			dependencies = (
-				3CBA93761DEC226800B3A99A /* PBXTargetDependency */,
 				3CBA938C1DEC3FAE00B3A99A /* PBXTargetDependency */,
 				3CD72A821DED6A27008760C0 /* PBXTargetDependency */,
+				3C72B3D01DFD189E00DEC065 /* PBXTargetDependency */,
 			);
 			name = Deardialing;
 			productName = Deardialing;
@@ -508,7 +511,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		9EB33825DA20020237A8A574 /* [CP] Copy Pods Resources */ = {
@@ -553,7 +556,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		CE87C91CD2DF48DBCCDFCB1A /* [CP] Check Pods Manifest.lock */ = {
@@ -568,7 +571,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		D92C6B4D0BD03B222CB8E4EE /* [CP] Check Pods Manifest.lock */ = {
@@ -583,7 +586,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		D9AFD0253C7A268B933B7E01 /* [CP] Copy Pods Resources */ = {
@@ -636,6 +639,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C72B3CD1DFBD61500DEC065 /* UIImage+Extension.swift in Sources */,
 				3CD72A981DED70EA008760C0 /* Contact.swift in Sources */,
 				3CD72A931DED6A97008760C0 /* Utils.swift in Sources */,
 			);
@@ -644,10 +648,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3CBA93761DEC226800B3A99A /* PBXTargetDependency */ = {
+		3C72B3D01DFD189E00DEC065 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3CBA93691DEC226800B3A99A /* dialing */;
-			targetProxy = 3CBA93751DEC226800B3A99A /* PBXContainerItemProxy */;
+			targetProxy = 3C72B3CF1DFD189E00DEC065 /* PBXContainerItemProxy */;
 		};
 		3CBA938C1DEC3FAE00B3A99A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -787,6 +791,7 @@
 			baseConfigurationReference = 2BA8DC30AD561CD5E1F6A553 /* Pods-Deardialing.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				APP_DISPLAY_NAME = "快速拨号";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Deardialing/Deardialing.entitlements;
 				DEVELOPMENT_TEAM = 46A8679957;
@@ -803,6 +808,7 @@
 			baseConfigurationReference = 26B02FA5DEE7B61CBFBBA4A3 /* Pods-Deardialing.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				APP_DISPLAY_NAME = "快速拨号";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Deardialing/Deardialing.entitlements;
 				DEVELOPMENT_TEAM = 46A8679957;
@@ -826,6 +832,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
+				Today_DISPLAY_NAME = "快速拨号";
 			};
 			name = Debug;
 		};
@@ -841,6 +848,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
+				Today_DISPLAY_NAME = "快速拨号";
 			};
 			name = Release;
 		};

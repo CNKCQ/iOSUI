@@ -22,20 +22,26 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        
     }
     
     func setup() {
         contacts = (NSKeyedUnarchiver.unarchiveObject(withFile: groupFilePath) as? [Contact]) ?? []
         for (idx, contact) in contacts.enumerated() {
-            let button = UIButton(frame: CGRect(x: (idx) * (60 + 5), y: 0, width: 60, height: 60))
+            let button = UIButton(frame: CGRect(x: idx * (60 + 15) + 15, y: 5, width: 60, height: 60))
             button.layer.cornerRadius = 30
-            button.setTitle(contact.givenName, for: .normal)
+            let image = UIImage(data: contact.imageData)
+            button.setImage(image, for: .normal)
             button.clipsToBounds = true
             button.backgroundColor = UIColor.brown
             button.tag = idx
             button.addTarget(self, action: #selector(tap(sender:)), for: .touchUpInside)
+            let nameLabel = UILabel(frame: CGRect(x: button.frame.minX, y: button.frame.maxY + 5, width: button.frame.width, height: 15))
+            nameLabel.textAlignment = .center
+            nameLabel.font = UIFont.systemFont(ofSize: 14)
+            nameLabel.textColor = UIColor.darkText
+            nameLabel.text = contact.familyName
             view.addSubview(button)
+            view.addSubview(nameLabel)
         }
     }
     

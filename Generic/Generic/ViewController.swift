@@ -8,8 +8,9 @@
 
 import UIKit
 
-class ViewController: BaseController, UITableViewDelegate, UITableViewDataSource {
-    var tableView: UITableView!
+@IBDesignable
+class ViewController: GenericClass<Rice>, UITableViewDelegate, UITableViewDataSource {
+    @IBInspectable var tableView: UITableView!
     let datas = ["Generic Function", "Generic Class"]
 
     override func viewDidLoad() {
