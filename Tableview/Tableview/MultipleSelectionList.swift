@@ -13,7 +13,7 @@ enum MultiSelectedStyle {
 }
 
 
-class MultipleSelectionController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MultipleSelectionList: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var tableView: UITableView!
     let data = ["naiha", "naiha", "naiha", "naiha", "naiha", "naiha"]
     
@@ -21,9 +21,6 @@ class MultipleSelectionController: UIViewController, UITableViewDelegate, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let url = URL(string: "mm://database/tags_tag/hell0?name=wang") {
-            print(url.scheme ?? "", url.host, url.port ?? "", url.path, url.query, url.lastPathComponent, url.pathComponents, "🌹")
-        }
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(add))
         tableView = UITableView(frame: view.bounds, style: .plain)
         tableView.delegate = self

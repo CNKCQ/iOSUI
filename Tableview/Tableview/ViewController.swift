@@ -9,6 +9,11 @@
 import UIKit
 
 
-class ViewController: UIViewController {
+class ViewController: BaseTableList {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        data = ["AdaptiveList", "MultipleSelectionList"]
+    }
     
 }
