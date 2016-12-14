@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C30B0411DFF83530089C16C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C30B0401DFF83530089C16C /* ViewController.swift */; };
 		3C320A211DF58161007F4A6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C320A201DF58161007F4A6B /* AppDelegate.swift */; };
-		3C320A231DF58161007F4A6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C320A221DF58161007F4A6B /* ViewController.swift */; };
+		3C320A231DF58161007F4A6B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C320A221DF58161007F4A6B /* BaseViewController.swift */; };
 		3C320A261DF58161007F4A6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C320A241DF58161007F4A6B /* Main.storyboard */; };
 		3C320A281DF58161007F4A6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C320A271DF58161007F4A6B /* Assets.xcassets */; };
 		3C320A2B1DF58161007F4A6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C320A291DF58161007F4A6B /* LaunchScreen.storyboard */; };
@@ -23,9 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C30B0401DFF83530089C16C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3C320A1D1DF58161007F4A6B /* Generic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Generic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C320A201DF58161007F4A6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3C320A221DF58161007F4A6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3C320A221DF58161007F4A6B /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		3C320A251DF58161007F4A6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C320A271DF58161007F4A6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C320A2A1DF58161007F4A6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -71,7 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				3C320A201DF58161007F4A6B /* AppDelegate.swift */,
-				3C320A221DF58161007F4A6B /* ViewController.swift */,
+				3C320A221DF58161007F4A6B /* BaseViewController.swift */,
 				3C320A241DF58161007F4A6B /* Main.storyboard */,
 				3C320A271DF58161007F4A6B /* Assets.xcassets */,
 				3C320A291DF58161007F4A6B /* LaunchScreen.storyboard */,
@@ -84,6 +86,7 @@
 				3C320A461DF64C4F007F4A6B /* SubGenericClass.swift */,
 				3C320A401DF59DE4007F4A6B /* GenericClass.swift */,
 				3C320A421DF5A37C007F4A6B /* BaseGenericClass.swift */,
+				3C30B0401DFF83530089C16C /* ViewController.swift */,
 			);
 			path = Generic;
 			sourceTree = "<group>";
@@ -165,10 +168,11 @@
 				3C320A431DF5A37C007F4A6B /* BaseGenericClass.swift in Sources */,
 				3C320A3D1DF5851C007F4A6B /* Rice.swift in Sources */,
 				3C320A3F1DF59D7B007F4A6B /* GenericFunction.swift in Sources */,
+				3C30B0411DFF83530089C16C /* ViewController.swift in Sources */,
 				3C320A3B1DF58469007F4A6B /* Food.swift in Sources */,
 				3C320A491DF64D41007F4A6B /* Porridge.swift in Sources */,
 				3C320A471DF64C4F007F4A6B /* SubGenericClass.swift in Sources */,
-				3C320A231DF58161007F4A6B /* ViewController.swift in Sources */,
+				3C320A231DF58161007F4A6B /* BaseViewController.swift in Sources */,
 				3C320A211DF58161007F4A6B /* AppDelegate.swift in Sources */,
 				3C320A331DF58181007F4A6B /* BaseController.swift in Sources */,
 			);
