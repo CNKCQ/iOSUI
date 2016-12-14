@@ -13,8 +13,7 @@ class AdaptiveList: BaseTableList {
     override func viewDidLoad() {
         super.viewDidLoad()
         data = ["naiha", "naiha", "naiha", "naiha", "naiha", "naiha"]
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(add))
-                
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(add))   
     }
         
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

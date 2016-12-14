@@ -11,41 +11,47 @@ import UIKit
 class ViewController: UIViewController {
     var tableView: UITableView!
     let names = ["", "", "", ""]
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView = UITableView(frame: view.bounds)
+        tableView.delaysContentTouches = false // See: http://www.jianshu.com/p/b909f8f3ca6c
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(CustomCell.self, forCellReuseIdentifier: "cell")
         tableView.tableFooterView = UIView()
         view.addSubview(tableView)
         
+        for subView in tableView.subviews {
+            if let v = subView as? UIScrollView {
+                v.delaysContentTouches = false
+            }
+        }
     }
-
+    
     override func routerWithEvent(name: String, userInfo: [String : Any]) {
         if name == "click" {
             print(userInfo, "🌹")
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-}
-
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return names.count
+        
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
-        cell.textLabel?.text = names[indexPath.row]
-        return cell
-    }
+    extension ViewController: UITableViewDelegate, UITableViewDataSource {
+        
+        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return names.count
+        }
+        
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+            cell.textLabel?.text = names[indexPath.row]
+            return cell
+        }
 }
 
