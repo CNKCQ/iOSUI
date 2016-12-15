@@ -10,6 +10,4 @@ struct MapSDk {
     static func configLocation() {
         AMapServices.shared().apiKey = "fffb25cb54f79a6f28929aa269be6e68"
     }
-    
 }
-
