@@ -12,6 +12,14 @@
 		3C2FF7951E0229C800BFD147 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2FF7931E0229C800BFD147 /* Main.storyboard */; };
 		3C2FF7971E0229C800BFD147 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C2FF7961E0229C800BFD147 /* Assets.xcassets */; };
 		3C2FF79A1E0229C800BFD147 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2FF7981E0229C800BFD147 /* LaunchScreen.storyboard */; };
+		3C2FF7A61E02331F00BFD147 /* MapSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2FF7A51E02331F00BFD147 /* MapSDK.swift */; };
+		3C2FF7A81E023C6600BFD147 /* SubtitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2FF7A71E023C6600BFD147 /* SubtitleCell.swift */; };
+		3C2FF7BB1E0241F400BFD147 /* SingleLocaitonAloneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2FF7BA1E0241F400BFD147 /* SingleLocaitonAloneViewController.swift */; };
+		3C2FF7BD1E02422300BFD147 /* SerialLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2FF7BC1E02422300BFD147 /* SerialLocationViewController.swift */; };
+		3C2FF7BF1E02425A00BFD147 /* SingleLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2FF7BE1E02425A00BFD147 /* SingleLocationViewController.swift */; };
+		3C2FF7C11E0242BB00BFD147 /* MonitoringRegionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2FF7C01E0242BB00BFD147 /* MonitoringRegionViewController.swift */; };
+		3C2FF7C71E0243B900BFD147 /* BackgroundLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2FF7C61E0243B900BFD147 /* BackgroundLocationViewController.swift */; };
+		3C2FF7C91E02459A00BFD147 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2FF7C81E02459A00BFD147 /* BaseController.swift */; };
 		C5E0FE4A8B98996F09ABEE72 /* Pods_Maplocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B1FE805B156D804838B1EF1 /* Pods_Maplocation.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +33,14 @@
 		3C2FF7991E0229C800BFD147 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C2FF79B1E0229C800BFD147 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C2FF7A11E022E0900BFD147 /* Maplocation-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Maplocation-Bridging-Header.h"; sourceTree = "<group>"; };
+		3C2FF7A51E02331F00BFD147 /* MapSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapSDK.swift; sourceTree = "<group>"; };
+		3C2FF7A71E023C6600BFD147 /* SubtitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtitleCell.swift; sourceTree = "<group>"; };
+		3C2FF7BA1E0241F400BFD147 /* SingleLocaitonAloneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleLocaitonAloneViewController.swift; sourceTree = "<group>"; };
+		3C2FF7BC1E02422300BFD147 /* SerialLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialLocationViewController.swift; sourceTree = "<group>"; };
+		3C2FF7BE1E02425A00BFD147 /* SingleLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleLocationViewController.swift; sourceTree = "<group>"; };
+		3C2FF7C01E0242BB00BFD147 /* MonitoringRegionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonitoringRegionViewController.swift; sourceTree = "<group>"; };
+		3C2FF7C61E0243B900BFD147 /* BackgroundLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundLocationViewController.swift; sourceTree = "<group>"; };
+		3C2FF7C81E02459A00BFD147 /* BaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		3CE917077C77E8162A5AEBC3 /* Pods-Maplocation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Maplocation.release.xcconfig"; path = "Pods/Target Support Files/Pods-Maplocation/Pods-Maplocation.release.xcconfig"; sourceTree = "<group>"; };
 		EADEAF54B45E49C761B293B4 /* Pods-Maplocation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Maplocation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Maplocation/Pods-Maplocation.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,6 +78,7 @@
 		3C2FF78E1E0229C800BFD147 /* Maplocation */ = {
 			isa = PBXGroup;
 			children = (
+				3C2FF7A91E023DF700BFD147 /* Items */,
 				3C2FF78F1E0229C800BFD147 /* AppDelegate.swift */,
 				3C2FF7911E0229C800BFD147 /* ViewController.swift */,
 				3C2FF7931E0229C800BFD147 /* Main.storyboard */,
@@ -69,8 +86,63 @@
 				3C2FF7981E0229C800BFD147 /* LaunchScreen.storyboard */,
 				3C2FF79B1E0229C800BFD147 /* Info.plist */,
 				3C2FF7A11E022E0900BFD147 /* Maplocation-Bridging-Header.h */,
+				3C2FF7A51E02331F00BFD147 /* MapSDK.swift */,
+				3C2FF7A71E023C6600BFD147 /* SubtitleCell.swift */,
+				3C2FF7C81E02459A00BFD147 /* BaseController.swift */,
 			);
 			path = Maplocation;
+			sourceTree = "<group>";
+		};
+		3C2FF7A91E023DF700BFD147 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				3C2FF7C21E02439700BFD147 /* BackgroundLocation */,
+				3C2FF7AA1E023E5900BFD147 /* MonitoringRegion */,
+				3C2FF7AD1E023E5900BFD147 /* SerialLocation */,
+				3C2FF7B01E023E5900BFD147 /* SingleLocaitonAlone */,
+				3C2FF7B31E023E5900BFD147 /* SingleLocation */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		3C2FF7AA1E023E5900BFD147 /* MonitoringRegion */ = {
+			isa = PBXGroup;
+			children = (
+				3C2FF7C01E0242BB00BFD147 /* MonitoringRegionViewController.swift */,
+			);
+			path = MonitoringRegion;
+			sourceTree = "<group>";
+		};
+		3C2FF7AD1E023E5900BFD147 /* SerialLocation */ = {
+			isa = PBXGroup;
+			children = (
+				3C2FF7BC1E02422300BFD147 /* SerialLocationViewController.swift */,
+			);
+			path = SerialLocation;
+			sourceTree = "<group>";
+		};
+		3C2FF7B01E023E5900BFD147 /* SingleLocaitonAlone */ = {
+			isa = PBXGroup;
+			children = (
+				3C2FF7BA1E0241F400BFD147 /* SingleLocaitonAloneViewController.swift */,
+			);
+			path = SingleLocaitonAlone;
+			sourceTree = "<group>";
+		};
+		3C2FF7B31E023E5900BFD147 /* SingleLocation */ = {
+			isa = PBXGroup;
+			children = (
+				3C2FF7BE1E02425A00BFD147 /* SingleLocationViewController.swift */,
+			);
+			path = SingleLocation;
+			sourceTree = "<group>";
+		};
+		3C2FF7C21E02439700BFD147 /* BackgroundLocation */ = {
+			isa = PBXGroup;
+			children = (
+				3C2FF7C61E0243B900BFD147 /* BackgroundLocationViewController.swift */,
+			);
+			path = BackgroundLocation;
 			sourceTree = "<group>";
 		};
 		6A80F5900DAF57F83199EE69 /* Frameworks */ = {
@@ -215,8 +287,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C2FF7BD1E02422300BFD147 /* SerialLocationViewController.swift in Sources */,
+				3C2FF7A61E02331F00BFD147 /* MapSDK.swift in Sources */,
+				3C2FF7BB1E0241F400BFD147 /* SingleLocaitonAloneViewController.swift in Sources */,
+				3C2FF7A81E023C6600BFD147 /* SubtitleCell.swift in Sources */,
+				3C2FF7C91E02459A00BFD147 /* BaseController.swift in Sources */,
 				3C2FF7921E0229C800BFD147 /* ViewController.swift in Sources */,
+				3C2FF7C11E0242BB00BFD147 /* MonitoringRegionViewController.swift in Sources */,
+				3C2FF7C71E0243B900BFD147 /* BackgroundLocationViewController.swift in Sources */,
 				3C2FF7901E0229C800BFD147 /* AppDelegate.swift in Sources */,
+				3C2FF7BF1E02425A00BFD147 /* SingleLocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
