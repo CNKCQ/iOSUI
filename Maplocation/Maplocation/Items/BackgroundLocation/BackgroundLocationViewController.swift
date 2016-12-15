@@ -8,8 +8,7 @@
 
 class BackgroundLocationViewController: BaseController, MAMapViewDelegate, AMapLocationManagerDelegate {
     
-    //MARK: - Properties
-    
+    // MARK: - Properties
     let showSegment = UISegmentedControl(items: ["开始定位", "停止定位"])
     let backgroundSegment = UISegmentedControl(items: ["开启后台", "禁止后台"])
     let pointAnnotation = MAPointAnnotation()
@@ -17,13 +16,12 @@ class BackgroundLocationViewController: BaseController, MAMapViewDelegate, AMapL
     var mapView: MAMapView!
     lazy var locationManager = AMapLocationManager()
     
-    //MARK: - Action Handle
-    
+    // MARK: - Action Handle
     func configLocationManager() {
         locationManager.delegate = self
-        
+        // 指定定位是否会被系统自动暂停。默认为YES。
         locationManager.pausesLocationUpdatesAutomatically = false
-        
+        // 是否允许后台定位。默认为NO。只在iOS 9.0及之后起作用。
         locationManager.allowsBackgroundLocationUpdates = true
     }
     
@@ -58,23 +56,21 @@ class BackgroundLocationViewController: BaseController, MAMapViewDelegate, AMapL
         }
     }
     
-    //MARK: - AMapLocationManagerDelegate
-    
+    // MARK: - AMapLocationManagerDelegate
     func amapLocationManager(_ manager: AMapLocationManager!, didFailWithError error: Error!) {
         let error = error as NSError
-        NSLog("didFailWithError:{\(error.code) - \(error.localizedDescription)};")
+        print("didFailWithError:{\(error.code) - \(error.localizedDescription)};")
     }
     
     func amapLocationManager(_ manager: AMapLocationManager!, didUpdate location: CLLocation!) {
-        NSLog("location:{lat:\(location.coordinate.latitude); lon:\(location.coordinate.longitude); accuracy:\(location.horizontalAccuracy)};");
+        print("location:{lat:\(location.coordinate.latitude); lon:\(location.coordinate.longitude); accuracy:\(location.horizontalAccuracy)};");
         
         pointAnnotation.coordinate = location.coordinate
         mapView.centerCoordinate = location.coordinate
         mapView.setZoomLevel(15.1, animated: false)
     }
     
-    //MARK: - Life Cycle
-    
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
@@ -117,8 +113,7 @@ class BackgroundLocationViewController: BaseController, MAMapViewDelegate, AMapL
         setToolbarItems([flexble, UIBarButtonItem(customView: showSegment), flexble, UIBarButtonItem(customView: backgroundSegment), flexble], animated: false)
     }
     
-    //MARK: - MAMapVie Delegate
-    
+    // MARK: - MAMapVie Delegate
     func mapView(_ mapView: MAMapView!, viewFor annotation: MAAnnotation!) -> MAAnnotationView! {
         if annotation is MAPointAnnotation {
             let pointReuseIndetifier = "pointReuseIndetifier"

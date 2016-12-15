@@ -8,16 +8,14 @@
 
 class SerialLocationViewController: BaseController, MAMapViewDelegate, AMapLocationManagerDelegate {
     
-    //MARK: - Properties
-    
+    // MARK: - Properties
     let showSegment = UISegmentedControl(items: ["Start", "Stop"])
     let pointAnnotation = MAPointAnnotation()
     
     var mapView: MAMapView!
     lazy var locationManager = AMapLocationManager()
     
-    //MARK: - Action Handle
-    
+    // MARK: - Action Handle
     func configLocationManager() {
         locationManager.delegate = self
         
@@ -40,31 +38,27 @@ class SerialLocationViewController: BaseController, MAMapViewDelegate, AMapLocat
         }
     }
     
-    //MARK: - AMapLocationManagerDelegate
-    
+    // MARK: - AMapLocationManagerDelegate
     func amapLocationManager(_ manager: AMapLocationManager!, didFailWithError error: Error!) {
         let error = error as NSError
-        NSLog("didFailWithError:{\(error.code) - \(error.localizedDescription)};")
+        print("didFailWithError:{\(error.code) - \(error.localizedDescription)};")
     }
     
     func amapLocationManager(_ manager: AMapLocationManager!, didUpdate location: CLLocation!, reGeocode: AMapLocationReGeocode?) {
-        NSLog("location:{lat:\(location.coordinate.latitude); lon:\(location.coordinate.longitude); accuracy:\(location.horizontalAccuracy); reGeocode:\(reGeocode?.formattedAddress)};");
+        print("location:{lat:\(location.coordinate.latitude); lon:\(location.coordinate.longitude); accuracy:\(location.horizontalAccuracy); reGeocode:\(reGeocode?.formattedAddress)};");
         
         pointAnnotation.coordinate = location.coordinate
         mapView.centerCoordinate = location.coordinate
         mapView.setZoomLevel(15.1, animated: false)
     }
     
-    //MARK: - Life Cycle
-    
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
         
         initToolBar()
-        
         initMapView()
-        
         configLocationManager()
     }
     
@@ -96,8 +90,7 @@ class SerialLocationViewController: BaseController, MAMapViewDelegate, AMapLocat
         setToolbarItems([flexble, UIBarButtonItem(customView: showSegment), flexble], animated: false)
     }
     
-    //MARK: - MAMapVie Delegate
-    
+    // MARK: - MAMapVie Delegate
     func mapView(_ mapView: MAMapView!, viewFor annotation: MAAnnotation!) -> MAAnnotationView! {
         if annotation is MAPointAnnotation {
             let pointReuseIndetifier = "pointReuseIndetifier"

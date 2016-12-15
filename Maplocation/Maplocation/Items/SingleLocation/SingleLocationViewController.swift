@@ -22,9 +22,9 @@ class SingleLocationViewController: BaseController, MAMapViewDelegate, AMapLocat
         locationManager.pausesLocationUpdatesAutomatically = false
 
         locationManager.allowsBackgroundLocationUpdates = true
-
+        // 指定单次定位超时时间,默认为10s。最小值是2s。注意单次定位请求前设置。
         locationManager.locationTimeout = defaultLocationTimeout
-
+        // 指定单次定位逆地理超时时间,默认为5s。最小值是2s。注意单次定位请求前设置。
         locationManager.reGeocodeTimeout = defaultReGeocodeTimeout
     }
 
@@ -53,13 +53,9 @@ class SingleLocationViewController: BaseController, MAMapViewDelegate, AMapLocat
         view.backgroundColor = UIColor.white
 
         initToolBar()
-
         initNavigationBar()
-
         initMapView()
-
         initCompleteBlock()
-
         configLocationManager()
     }
 
