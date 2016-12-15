@@ -7,144 +7,116 @@
 //  连续定位
 
 class SerialLocationViewController: BaseController, MAMapViewDelegate, AMapLocationManagerDelegate {
-    let defaultLocationTimeout = 6
-    let defaultReGeocodeTimeout = 3
-
+    
+    //MARK: - Properties
+    
+    let showSegment = UISegmentedControl(items: ["Start", "Stop"])
+    let pointAnnotation = MAPointAnnotation()
+    
     var mapView: MAMapView!
-    var completionBlock: AMapLocatingCompletionBlock!
     lazy var locationManager = AMapLocationManager()
-
+    
+    //MARK: - Action Handle
+    
     func configLocationManager() {
         locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
-
+        
         locationManager.pausesLocationUpdatesAutomatically = false
-
+        
         locationManager.allowsBackgroundLocationUpdates = true
-
-        locationManager.locationTimeout = defaultLocationTimeout
-
-        locationManager.reGeocodeTimeout = defaultReGeocodeTimeout
     }
-
-    func cleanUpAction() {
-        locationManager.stopUpdatingLocation()
-
-        locationManager.delegate = nil
-
-        mapView.removeAnnotations(mapView.annotations)
+    
+    func showSegmentAction(sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 1 {
+            
+            locationManager.stopUpdatingLocation()
+            
+            mapView.removeAnnotation(pointAnnotation)
+        }
+        else {
+            mapView.addAnnotation(pointAnnotation)
+            
+            locationManager.startUpdatingLocation()
+        }
     }
-
-    func reGeocodeAction() {
-        mapView.removeAnnotations(mapView.annotations)
-
-        locationManager.requestLocation(withReGeocode: true, completionBlock: completionBlock)
+    
+    //MARK: - AMapLocationManagerDelegate
+    
+    func amapLocationManager(_ manager: AMapLocationManager!, didFailWithError error: Error!) {
+        let error = error as NSError
+        NSLog("didFailWithError:{\(error.code) - \(error.localizedDescription)};")
     }
-
-    func locAction() {
-        mapView.removeAnnotations(mapView.annotations)
-
-        locationManager.requestLocation(withReGeocode: false, completionBlock: completionBlock)
+    
+    func amapLocationManager(_ manager: AMapLocationManager!, didUpdate location: CLLocation!, reGeocode: AMapLocationReGeocode?) {
+        NSLog("location:{lat:\(location.coordinate.latitude); lon:\(location.coordinate.longitude); accuracy:\(location.horizontalAccuracy); reGeocode:\(reGeocode?.formattedAddress)};");
+        
+        pointAnnotation.coordinate = location.coordinate
+        mapView.centerCoordinate = location.coordinate
+        mapView.setZoomLevel(15.1, animated: false)
     }
-
+    
+    //MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
-
+        
         initToolBar()
-
-        initNavigationBar()
-
+        
         initMapView()
-
-        initCompleteBlock()
-
+        
         configLocationManager()
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setToolbarHidden(false, animated: false)
     }
-
-    // MARK: - Initialization
-
-    func initCompleteBlock() {
-
-        completionBlock = { [weak self] (location: CLLocation?, regeocode: AMapLocationReGeocode?, error: Error?) in
-
-            if let error = error {
-                let error = error as NSError
-                NSLog("locError:{\(error.code) - \(error.localizedDescription)};")
-
-                if error.code == AMapLocationErrorCode.locateFailed.rawValue {
-                    return
-                }
-            }
-
-            if let location = location {
-                let annotation = MAPointAnnotation()
-                annotation.coordinate = location.coordinate
-
-                if let regeocode = regeocode {
-                    annotation.title = regeocode.formattedAddress
-                    annotation.subtitle = "\(regeocode.citycode!)-\(regeocode.adcode!)-\(location.horizontalAccuracy)m"
-                } else {
-                    annotation.title = String(format: "lat:%.6f;lon:%.6f;", arguments: [location.coordinate.latitude, location.coordinate.longitude])
-                    annotation.subtitle = "accuracy:\(location.horizontalAccuracy)m"
-                }
-
-                self?.addAnnotationsToMapView(annotation)
-            }
-        }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        mapView.addAnnotation(pointAnnotation)
+        locationManager.startUpdatingLocation()
     }
-
+    
     func initMapView() {
         mapView = MAMapView(frame: view.bounds)
         mapView.delegate = self
-
+        
         view.addSubview(mapView)
     }
-
-    func addAnnotationsToMapView(_ annotation: MAAnnotation) {
-        mapView.addAnnotation(annotation)
-
-        mapView.selectAnnotation(annotation, animated: true)
-        mapView.setZoomLevel(15.1, animated: false)
-        mapView.setCenter(annotation.coordinate, animated: true)
-    }
-
+    
     func initToolBar() {
         let flexble = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let reGeocodeItem = UIBarButtonItem(title: "带逆地理定位", style: .plain, target: self, action: #selector(reGeocodeAction))
-        let locItem = UIBarButtonItem(title: "不带逆地理定位", style: .plain, target: self, action: #selector(locAction))
-
-        setToolbarItems([flexble, reGeocodeItem, flexble, locItem, flexble], animated: false)
+        
+        showSegment.addTarget(self, action: #selector(showSegmentAction(sender:)), for: .valueChanged)
+        showSegment.selectedSegmentIndex = 0
+        
+        setToolbarItems([flexble, UIBarButtonItem(customView: showSegment), flexble], animated: false)
     }
-
-    func initNavigationBar() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Clean", style: .plain, target: self, action: #selector(cleanUpAction))
-    }
-
-    // MARK: - MAMapVie Delegate
+    
+    //MARK: - MAMapVie Delegate
+    
     func mapView(_ mapView: MAMapView!, viewFor annotation: MAAnnotation!) -> MAAnnotationView! {
         if annotation is MAPointAnnotation {
             let pointReuseIndetifier = "pointReuseIndetifier"
-
+            
             var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: pointReuseIndetifier) as? MAPinAnnotationView
-
+            
             if annotationView == nil {
                 annotationView = MAPinAnnotationView(annotation: annotation, reuseIdentifier: pointReuseIndetifier)
             }
-
-            annotationView?.canShowCallout = true
-            annotationView?.animatesDrop = true
-            annotationView?.isDraggable = false
-            annotationView?.pinColor = .purple
-
+            
+            annotationView?.canShowCallout  = false
+            annotationView?.animatesDrop    = false
+            annotationView?.isDraggable     = false
+            annotationView?.image           = UIImage(named: "icon_location.png")
+            
             return annotationView
         }
-
+        
         return nil
     }
+    
 }
