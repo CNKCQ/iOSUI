@@ -16,11 +16,8 @@ class SingleLocationViewController: BaseController, MAMapViewDelegate, AMapLocat
 
     func configLocationManager() {
         locationManager.delegate = self
-
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
-
         locationManager.pausesLocationUpdatesAutomatically = false
-
         locationManager.allowsBackgroundLocationUpdates = true
         // 指定单次定位超时时间,默认为10s。最小值是2s。注意单次定位请求前设置。
         locationManager.locationTimeout = defaultLocationTimeout

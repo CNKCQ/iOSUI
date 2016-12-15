@@ -74,9 +74,7 @@ class BackgroundLocationViewController: BaseController, MAMapViewDelegate, AMapL
         view.backgroundColor = UIColor.white
 
         initToolBar()
-
         initMapView()
-
         configLocationManager()
     }
 
