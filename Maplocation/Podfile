@@ -8,5 +8,6 @@ target 'Maplocation' do
   pod 'AMapLocation'  #定位 SDK 有IDFA
   # pod 'AMapLocation-NO-IDFA' #无IDFA版定位 SDK See: http://lbs.amap.com/api/ios-location-sdk/guide/crest-project/idfa-guide/
   pod 'AMap3DMap'     #http://lbs.amap.com/api/ios-sdk/guide/create-project/cocoapods/
+  pod 'AMapNavi'  #导航SDK
 
 end

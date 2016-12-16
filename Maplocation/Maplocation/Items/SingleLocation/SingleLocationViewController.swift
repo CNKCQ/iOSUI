@@ -27,21 +27,17 @@ class SingleLocationViewController: BaseController, MAMapViewDelegate, AMapLocat
 
     func cleanUpAction() {
         locationManager.stopUpdatingLocation()
-
         locationManager.delegate = nil
-
         mapView.removeAnnotations(mapView.annotations)
     }
 
     func reGeocodeAction() {
         mapView.removeAnnotations(mapView.annotations)
-
         locationManager.requestLocation(withReGeocode: true, completionBlock: completionBlock)
     }
 
     func locAction() {
         mapView.removeAnnotations(mapView.annotations)
-
         locationManager.requestLocation(withReGeocode: false, completionBlock: completionBlock)
     }
 
@@ -139,4 +135,13 @@ class SingleLocationViewController: BaseController, MAMapViewDelegate, AMapLocat
         }
         return nil
     }
+    
+    func mapView(_ mapView: MAMapView!, didSelect view: MAAnnotationView!) {
+        print("你已经点击了 标注 \(view.annotation.title, view.annotation.subtitle)", "🌹")
+    }
+    
+    func mapView(_ mapView: MAMapView!, didAnnotationViewCalloutTapped view: MAAnnotationView!) {
+        print("i was called 标注", "🌹")
+    }
+
 }

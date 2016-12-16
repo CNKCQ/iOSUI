@@ -18,7 +18,7 @@ class MonitoringRegionViewController: BaseController, MAMapViewDelegate, AMapLoc
     func configLocationManager() {
         locationManager.delegate = self
         // 设定定位精度。默认为 kCLLocationAccuracyBest
-        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+//        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         // 指定定位是否会被系统自动暂停。默认为YES
         locationManager.pausesLocationUpdatesAutomatically = false
         // 是否允许后台定位。默认为NO。只在iOS 9.0及之后起作用
@@ -27,6 +27,7 @@ class MonitoringRegionViewController: BaseController, MAMapViewDelegate, AMapLoc
 
     // MARK: - Add Regions
     func getCurrentLocation() {
+        //  一次性请求
         locationManager.requestLocation(withReGeocode: true) { [weak self] (location: CLLocation?, regeocode: AMapLocationReGeocode?, error: Error?) in
             if let location = location {
                 self?.addCircleReionForCoordinate(coordinate: location.coordinate)
@@ -63,7 +64,23 @@ class MonitoringRegionViewController: BaseController, MAMapViewDelegate, AMapLoc
 
     // 开始监控region回调函数
     func amapLocationManager(_ manager: AMapLocationManager!, didStartMonitoringFor region: AMapLocationRegion!) {
+        
         print("didStartMonitoringForRegion:%@", region)
+    }
+    
+    // 定位数据更新
+//    func amapLocationManager(_ manager: AMapLocationManager!, didUpdate location: CLLocation!, reGeocode: AMapLocationReGeocode!) {
+//            let annotation = MAPointAnnotation()
+//            annotation.coordinate = location.coordinate
+//            self.addAnnotationsToMapView(annotation)
+//    }
+    
+    func addAnnotationsToMapView(_ annotation: MAAnnotation) {
+        mapView?.addAnnotation(annotation)
+        
+        mapView?.selectAnnotation(annotation, animated: true)
+        mapView?.setZoomLevel(15.1, animated: false)
+        mapView?.setCenter(annotation.coordinate, animated: true)
     }
 
     // 监控region失败回调函数
@@ -112,6 +129,7 @@ class MonitoringRegionViewController: BaseController, MAMapViewDelegate, AMapLoc
         for aRegion in regions {
             locationManager.stopMonitoring(for: aRegion)
         }
+        
     }
 
     func initMapView() {
@@ -140,4 +158,17 @@ class MonitoringRegionViewController: BaseController, MAMapViewDelegate, AMapLoc
         }
         return nil
     }
+    
+    func mapView(_ mapView: MAMapView!, didSelect view: MAAnnotationView!) {
+        print("你已经点击了 标注 \(view.annotation.title, view.annotation.subtitle)", "🌹")
+    }
+    
+    func mapView(_ mapView: MAMapView!, didAnnotationViewCalloutTapped view: MAAnnotationView!) {
+        print("i was called 标注", "🌹")
+    }
+
+    deinit {
+        print("干掉了吗？")
+    }
+
 }

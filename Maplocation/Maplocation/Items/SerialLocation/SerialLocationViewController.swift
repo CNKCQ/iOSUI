@@ -68,7 +68,7 @@ class SerialLocationViewController: BaseController, MAMapViewDelegate, AMapLocat
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
+        
         mapView.addAnnotation(pointAnnotation)
         locationManager.startUpdatingLocation()
     }
@@ -88,6 +88,7 @@ class SerialLocationViewController: BaseController, MAMapViewDelegate, AMapLocat
 
         setToolbarItems([flexble, UIBarButtonItem(customView: showSegment), flexble], animated: false)
     }
+    
 
     // MARK: - MAMapVie Delegate
     func mapView(_ mapView: MAMapView!, viewFor annotation: MAAnnotation!) -> MAAnnotationView! {

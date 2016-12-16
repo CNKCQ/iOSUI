@@ -11,6 +11,7 @@ import UIKit
 class BaseTableList: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var tableView: UITableView!
     var data: [Any] = []
+    private var name = "nihao"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,4 +37,11 @@ class BaseTableList: UIViewController, UITableViewDelegate, UITableViewDataSourc
         return cell
     }
     
+}
+
+class test: BaseTableList {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+//        print(name)
+    }
 }
