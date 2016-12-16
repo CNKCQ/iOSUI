@@ -402,6 +402,7 @@
 		3C2FFAE21E03BAAE00BFD147 /* userPosition.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C2FF9691E03BAAD00BFD147 /* userPosition.png */; };
 		3C2FFAE31E03BAAE00BFD147 /* userPosition@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C2FF96A1E03BAAD00BFD147 /* userPosition@2x.png */; };
 		3C2FFAE61E03C0C400BFD147 /* MovingAnnotationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2FFAE51E03C0C400BFD147 /* MovingAnnotationViewController.swift */; };
+		3C2FFAE91E03C6CC00BFD147 /* RunningLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2FFAE81E03C6CC00BFD147 /* RunningLineViewController.swift */; };
 		C5E0FE4A8B98996F09ABEE72 /* Pods_Maplocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B1FE805B156D804838B1EF1 /* Pods_Maplocation.framework */; };
 /* End PBXBuildFile section */
 
@@ -805,6 +806,7 @@
 		3C2FF9691E03BAAD00BFD147 /* userPosition.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userPosition.png; sourceTree = "<group>"; };
 		3C2FF96A1E03BAAD00BFD147 /* userPosition@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "userPosition@2x.png"; sourceTree = "<group>"; };
 		3C2FFAE51E03C0C400BFD147 /* MovingAnnotationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovingAnnotationViewController.swift; sourceTree = "<group>"; };
+		3C2FFAE81E03C6CC00BFD147 /* RunningLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunningLineViewController.swift; sourceTree = "<group>"; };
 		3CE917077C77E8162A5AEBC3 /* Pods-Maplocation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Maplocation.release.xcconfig"; path = "Pods/Target Support Files/Pods-Maplocation/Pods-Maplocation.release.xcconfig"; sourceTree = "<group>"; };
 		EADEAF54B45E49C761B293B4 /* Pods-Maplocation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Maplocation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Maplocation/Pods-Maplocation.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1383,6 +1385,7 @@
 		3C2FFAE71E03C67900BFD147 /* overlay */ = {
 			isa = PBXGroup;
 			children = (
+				3C2FFAE81E03C6CC00BFD147 /* RunningLineViewController.swift */,
 			);
 			path = overlay;
 			sourceTree = "<group>";
@@ -1912,6 +1915,7 @@
 				3C2FF7BD1E02422300BFD147 /* SerialLocationViewController.swift in Sources */,
 				3C2FFAE61E03C0C400BFD147 /* MovingAnnotationViewController.swift in Sources */,
 				3C2FF7A61E02331F00BFD147 /* MapSDK.swift in Sources */,
+				3C2FFAE91E03C6CC00BFD147 /* RunningLineViewController.swift in Sources */,
 				3C2FF7BB1E0241F400BFD147 /* SingleLocaitonAloneViewController.swift in Sources */,
 				3C2FF7A81E023C6600BFD147 /* SubtitleCell.swift in Sources */,
 				3C2FF7EA1E03B99100BFD147 /* CustomUserLocationViewController.swift in Sources */,

@@ -18,6 +18,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         (MonitoringRegionViewController(), "地理围栏"),
         (CustomUserLocationViewController(), "自定义样式定位点"),
         (MovingAnnotationViewController(), "点标注平滑移动"),
+        (RunningLineViewController(), "模拟跑步轨迹"),
     ]
 
     override func viewDidLoad() {
