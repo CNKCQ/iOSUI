@@ -16,6 +16,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         (SerialLocationViewController(), "连续定位"),
         (BackgroundLocationViewController(), "连续后台定位"),
         (MonitoringRegionViewController(), "地理围栏"),
+        (CustomUserLocationViewController(), "自定义样式定位点"),
+        (MovingAnnotationViewController(), "点标注平滑移动"),
     ]
 
     override func viewDidLoad() {

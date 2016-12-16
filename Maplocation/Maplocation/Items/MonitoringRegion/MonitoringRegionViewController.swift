@@ -160,6 +160,7 @@ class MonitoringRegionViewController: BaseController, MAMapViewDelegate, AMapLoc
     }
     
     func mapView(_ mapView: MAMapView!, didSelect view: MAAnnotationView!) {
+        view.setValue("🌹🌹", forKeyPath: "view.annotation.title")
         print("你已经点击了 标注 \(view.annotation.title, view.annotation.subtitle)", "🌹")
     }
     
