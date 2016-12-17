@@ -29,14 +29,16 @@
 		3C3405691E0438CD00CC1BD5 /* Itemable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3405671E0438CD00CC1BD5 /* Itemable.swift */; };
 		3C34056B1E0439ED00CC1BD5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C34056A1E0439ED00CC1BD5 /* Item.swift */; };
 		3C34056C1E0439ED00CC1BD5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C34056A1E0439ED00CC1BD5 /* Item.swift */; };
-		3C34056E1E04EBE300CC1BD5 /* TableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C34056D1E04EBE300CC1BD5 /* TableList.swift */; };
-		3C34056F1E04EBE300CC1BD5 /* TableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C34056D1E04EBE300CC1BD5 /* TableList.swift */; };
 		3C3405711E0506CD00CC1BD5 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3405701E0506CD00CC1BD5 /* UIViewController+.swift */; };
 		3C3405721E0506CD00CC1BD5 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3405701E0506CD00CC1BD5 /* UIViewController+.swift */; };
 		3C3405741E05098900CC1BD5 /* GroupDatil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3405731E05098900CC1BD5 /* GroupDatil.swift */; };
 		3C3405751E05098900CC1BD5 /* GroupDatil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3405731E05098900CC1BD5 /* GroupDatil.swift */; };
 		3C3405771E05162100CC1BD5 /* TableGroupDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3405761E05162100CC1BD5 /* TableGroupDetail.swift */; };
 		3C3405781E05162100CC1BD5 /* TableGroupDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3405761E05162100CC1BD5 /* TableGroupDetail.swift */; };
+		3C34057A1E055EB600CC1BD5 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3405791E055EB600CC1BD5 /* Group.swift */; };
+		3C34057B1E055EB600CC1BD5 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3405791E055EB600CC1BD5 /* Group.swift */; };
+		3C34057D1E05863500CC1BD5 /* TableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C34057C1E05863500CC1BD5 /* TableList.swift */; };
+		3C34057E1E05863500CC1BD5 /* TableList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C34057C1E05863500CC1BD5 /* TableList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,10 +83,11 @@
 		3C3405641E0436C100CC1BD5 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		3C3405671E0438CD00CC1BD5 /* Itemable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Itemable.swift; sourceTree = "<group>"; };
 		3C34056A1E0439ED00CC1BD5 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		3C34056D1E04EBE300CC1BD5 /* TableList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableList.swift; sourceTree = "<group>"; };
 		3C3405701E0506CD00CC1BD5 /* UIViewController+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		3C3405731E05098900CC1BD5 /* GroupDatil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDatil.swift; sourceTree = "<group>"; };
 		3C3405761E05162100CC1BD5 /* TableGroupDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableGroupDetail.swift; sourceTree = "<group>"; };
+		3C3405791E055EB600CC1BD5 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		3C34057C1E05863500CC1BD5 /* TableList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,9 +153,10 @@
 				3C3405461E04353F00CC1BD5 /* Info.plist */,
 				3C3405671E0438CD00CC1BD5 /* Itemable.swift */,
 				3C34056A1E0439ED00CC1BD5 /* Item.swift */,
-				3C34056D1E04EBE300CC1BD5 /* TableList.swift */,
 				3C3405701E0506CD00CC1BD5 /* UIViewController+.swift */,
 				3C3405731E05098900CC1BD5 /* GroupDatil.swift */,
+				3C3405791E055EB600CC1BD5 /* Group.swift */,
+				3C34057C1E05863500CC1BD5 /* TableList.swift */,
 			);
 			path = ListKit;
 			sourceTree = "<group>";
@@ -277,12 +281,13 @@
 			files = (
 				3C3405681E0438CD00CC1BD5 /* Itemable.swift in Sources */,
 				3C3405771E05162100CC1BD5 /* TableGroupDetail.swift in Sources */,
+				3C34057D1E05863500CC1BD5 /* TableList.swift in Sources */,
 				3C34056B1E0439ED00CC1BD5 /* Item.swift in Sources */,
 				3C34055E1E0435DE00CC1BD5 /* Reusable.swift in Sources */,
 				3C3405711E0506CD00CC1BD5 /* UIViewController+.swift in Sources */,
 				3C3405601E0435DE00CC1BD5 /* UICollectionView+Reusable.swift in Sources */,
 				3C34052F1E04352C00CC1BD5 /* ViewController.swift in Sources */,
-				3C34056E1E04EBE300CC1BD5 /* TableList.swift in Sources */,
+				3C34057A1E055EB600CC1BD5 /* Group.swift in Sources */,
 				3C34055C1E0435DE00CC1BD5 /* ListPresenter.swift in Sources */,
 				3C3405621E0435DE00CC1BD5 /* UITableView+Reusable.swift in Sources */,
 				3C3405651E0436C100CC1BD5 /* CustomCell.swift in Sources */,
@@ -298,13 +303,14 @@
 				3C3405631E0435DE00CC1BD5 /* UITableView+Reusable.swift in Sources */,
 				3C3405611E0435DE00CC1BD5 /* UICollectionView+Reusable.swift in Sources */,
 				3C3405751E05098900CC1BD5 /* GroupDatil.swift in Sources */,
+				3C34057B1E055EB600CC1BD5 /* Group.swift in Sources */,
 				3C3405781E05162100CC1BD5 /* TableGroupDetail.swift in Sources */,
 				3C3405721E0506CD00CC1BD5 /* UIViewController+.swift in Sources */,
 				3C3405661E0436C100CC1BD5 /* CustomCell.swift in Sources */,
-				3C34056F1E04EBE300CC1BD5 /* TableList.swift in Sources */,
 				3C34055F1E0435DE00CC1BD5 /* Reusable.swift in Sources */,
 				3C34056C1E0439ED00CC1BD5 /* Item.swift in Sources */,
 				3C3405691E0438CD00CC1BD5 /* Itemable.swift in Sources */,
+				3C34057E1E05863500CC1BD5 /* TableList.swift in Sources */,
 				3C34055D1E0435DE00CC1BD5 /* ListPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

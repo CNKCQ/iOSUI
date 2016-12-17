@@ -11,6 +11,9 @@ import UIKit
 class GroupDatil: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var tableView: UITableView!
     var items: [[Item]] = [[]]
+    var titles: [(String, String)] = []
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,5 +46,19 @@ class GroupDatil: UIViewController, UITableViewDataSource, UITableViewDelegate {
             return
         }
         startActivity(dest)
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if titles.count > section {
+            return titles[section].0
+        }
+        return ""
+    }
+    
+    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        if titles.count > section {
+            return titles[section].1
+        }
+        return ""
     }
 }

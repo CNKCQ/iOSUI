@@ -14,16 +14,18 @@ class ViewController: GroupDatil {
         super.viewDidLoad()
         items = [
             [
-                Item(title: "nihao", subtitle: "wobuhao")
+                Item(title: "我的关注", subtitle: "wobuhao")
             ],
             [
-                Item(title: "hello", subtitle: "hello world"),
-                Item(title: "题目", subtitle: "yes"),
+                Item(title: "我的收藏", subtitle: "hello world"),
+                Item(title: "最近浏览", subtitle: "")
             ],
             [
-                Item(title: "go", subtitle: "where you want to go", dest: TableGroupDetail())
+                Item(title: "我的书夹", dest: TableGroupDetail(), selectable: true)
             ]
         ]
     }
+    
+    
 }
 
