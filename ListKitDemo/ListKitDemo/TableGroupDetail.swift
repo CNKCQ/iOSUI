@@ -12,7 +12,16 @@ class TableGroupDetail: GroupDatil {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.red
+        items = [
+            [
+                Item(title: "安全设置"),
+                Item(title: "意见与反馈")
+            ],
+            [
+                Item(title: "关于"),
+                Item(title: "版本")
+            ]
+        ]
     }
     
 }
