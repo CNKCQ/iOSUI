@@ -39,4 +39,25 @@ let closure = {
 }
 car = "Tesla"
 closure()
+//func print(_ values:Any...) {
+//    print(values, "🌹")
+//}
+
+let con = true
+
+public func log(_ items: Any..., separator: String = "", terminator: String = "") {
+    if con {
+        print(items)
+    }
+}
+log("Hello", "🌹")
+
+debugPrint("", 20)
+
+class Food {
+    class func ok(email: String) {
+        
+    }
+}
+
 

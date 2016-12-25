@@ -20,6 +20,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = ""
         tableView = UITableView(frame: view.bounds)
         tableView.delegate = self
         tableView.dataSource = self
@@ -27,15 +28,12 @@ class ViewController: UIViewController {
         tableView.tableFooterView = UIView()
         view.addSubview(tableView)
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(add))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "保存", style: .done, target: self, action: #selector(save))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "更多", style: .done, target: self, action: #selector(set))
+        datas = NSKeyedUnarchiver.unarchiveObject(withFile: groupFilePath) as? [Contact] ?? []
     }
     
-    func save() {
-        let contacts = NSKeyedUnarchiver.unarchiveObject(withFile: groupFilePath) as? [Contact]
-        contacts?.forEach { contact in
-            print(contact.familyName, contact.givenName, contact.imageData, contact.phoneNumber)
-        }
-
+    func set() {
+        navigationController?.pushViewController(SettingController(), animated: true)
     }
     
     func add() {
@@ -43,7 +41,6 @@ class ViewController: UIViewController {
         contact.delegate = self
         present(contact, animated: true, completion: nil)
     }
-    
 }
 
 extension ViewController: CNContactPickerDelegate {
@@ -59,7 +56,7 @@ extension ViewController: CNContactPickerDelegate {
     }
     
     func contactPicker(_ picker: CNContactPickerViewController, didSelect contactProperty: CNContactProperty) {
-        //        print(contactProperty.key, contactProperty.value)
+        // print(contactProperty.key, contactProperty.value)
     }
 }
 
@@ -71,8 +68,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
         let contact = datas[indexPath.row]
-        cell.imageView?.image = UIImage(data: contact.imageData)
-        cell.textLabel?.text = "\(contact.givenName)  \(contact.phoneNumber)"
+        cell.imageView?.image = UIImage(data: contact.imageData)?.image(width: 15, sizeToFit: CGSize(width: 30, height: 30))
+        cell.textLabel?.text = "\(contact.familyName)   \(contact.phoneNumber)"
         return cell
     }
 }

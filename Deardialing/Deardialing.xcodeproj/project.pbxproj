@@ -10,6 +10,12 @@
 		0CE372624BF2A8D4D9333E5F /* Pods_Deardialing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D28497CB954C9DB050D97C /* Pods_Deardialing.framework */; };
 		263AE530DF8B7E0CCC9D7C40 /* Pods_Dialkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0785576863807D2327A1013 /* Pods_Dialkit.framework */; };
 		3C1A08A01DED722C001C4FF5 /* Dialkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD72A7C1DED6A27008760C0 /* Dialkit.framework */; };
+		3C4AE8161E0FE60B008B3752 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AE8151E0FE60B008B3752 /* SettingController.swift */; };
+		3C4AE81B1E0FE6DD008B3752 /* GroupDatil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AE8171E0FE6DD008B3752 /* GroupDatil.swift */; };
+		3C4AE81C1E0FE6DD008B3752 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AE8181E0FE6DD008B3752 /* Item.swift */; };
+		3C4AE81D1E0FE6DD008B3752 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AE8191E0FE6DD008B3752 /* Reusable.swift */; };
+		3C4AE81E1E0FE6DD008B3752 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4AE81A1E0FE6DD008B3752 /* UITableView+Reusable.swift */; };
+		3C64ECDE1E0FF12B004581CB /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C64ECDD1E0FF12B004581CB /* ItemCell.swift */; };
 		3C72B3CD1DFBD61500DEC065 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C72B3CC1DFBD61500DEC065 /* UIImage+Extension.swift */; };
 		3C72B3CE1DFD189E00DEC065 /* dialing.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3CBA936A1DEC226800B3A99A /* dialing.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3CBA93551DEC224100B3A99A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBA93541DEC224100B3A99A /* AppDelegate.swift */; };
@@ -90,6 +96,12 @@
 		2BA8DC30AD561CD5E1F6A553 /* Pods-Deardialing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Deardialing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Deardialing/Pods-Deardialing.debug.xcconfig"; sourceTree = "<group>"; };
 		2EAAE0480A956A39E33CE414 /* Pods-calling.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calling.release.xcconfig"; path = "Pods/Target Support Files/Pods-calling/Pods-calling.release.xcconfig"; sourceTree = "<group>"; };
 		36772BFD9CC5F09B8B12AD8B /* Pods-Dialkit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dialkit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dialkit/Pods-Dialkit.debug.xcconfig"; sourceTree = "<group>"; };
+		3C4AE8151E0FE60B008B3752 /* SettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
+		3C4AE8171E0FE6DD008B3752 /* GroupDatil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDatil.swift; sourceTree = "<group>"; };
+		3C4AE8181E0FE6DD008B3752 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		3C4AE8191E0FE6DD008B3752 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		3C4AE81A1E0FE6DD008B3752 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
+		3C64ECDD1E0FF12B004581CB /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		3C72B3CC1DFBD61500DEC065 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		3CBA93511DEC224100B3A99A /* Deardialing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Deardialing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CBA93541DEC224100B3A99A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -190,9 +202,15 @@
 		3CBA93531DEC224100B3A99A /* Deardialing */ = {
 			isa = PBXGroup;
 			children = (
+				3C64ECDD1E0FF12B004581CB /* ItemCell.swift */,
 				3CBA937D1DEC272E00B3A99A /* Deardialing.entitlements */,
+				3C4AE8171E0FE6DD008B3752 /* GroupDatil.swift */,
+				3C4AE8181E0FE6DD008B3752 /* Item.swift */,
+				3C4AE8191E0FE6DD008B3752 /* Reusable.swift */,
+				3C4AE81A1E0FE6DD008B3752 /* UITableView+Reusable.swift */,
 				3CBA93541DEC224100B3A99A /* AppDelegate.swift */,
 				3CBA93561DEC224100B3A99A /* ViewController.swift */,
+				3C4AE8151E0FE60B008B3752 /* SettingController.swift */,
 				3CBA93581DEC224100B3A99A /* Main.storyboard */,
 				3CBA935B1DEC224100B3A99A /* Assets.xcassets */,
 				3CBA935D1DEC224100B3A99A /* LaunchScreen.storyboard */,
@@ -611,9 +629,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C4AE8161E0FE60B008B3752 /* SettingController.swift in Sources */,
 				3CBA93571DEC224100B3A99A /* ViewController.swift in Sources */,
+				3C4AE81B1E0FE6DD008B3752 /* GroupDatil.swift in Sources */,
 				3CBA93551DEC224100B3A99A /* AppDelegate.swift in Sources */,
+				3C64ECDE1E0FF12B004581CB /* ItemCell.swift in Sources */,
+				3C4AE81E1E0FE6DD008B3752 /* UITableView+Reusable.swift in Sources */,
+				3C4AE81C1E0FE6DD008B3752 /* Item.swift in Sources */,
 				3CD72A901DED6A97008760C0 /* Utils.swift in Sources */,
+				3C4AE81D1E0FE6DD008B3752 /* Reusable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -733,7 +757,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -777,7 +801,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -796,6 +820,7 @@
 				CODE_SIGN_ENTITLEMENTS = Deardialing/Deardialing.entitlements;
 				DEVELOPMENT_TEAM = 46A8679957;
 				INFOPLIST_FILE = Deardialing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KingCQ.Deardialing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -813,6 +838,7 @@
 				CODE_SIGN_ENTITLEMENTS = Deardialing/Deardialing.entitlements;
 				DEVELOPMENT_TEAM = 46A8679957;
 				INFOPLIST_FILE = Deardialing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KingCQ.Deardialing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
