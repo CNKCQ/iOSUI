@@ -43,21 +43,25 @@ closure()
 //    print(values, "🌹")
 //}
 
-let con = true
+struct animal {
+    
+}
 
-public func log(_ items: Any..., separator: String = "", terminator: String = "") {
-    if con {
-        print(items)
+struct Person {
+    let name: String
+    let age: Int
+}
+
+let xiaoming = Person(name: "小明", age: 10)
+let re = Mirror(reflecting: xiaoming)
+print(re.children.count)
+for (i, item) in re.children.enumerated() {
+    if let name = item.label, name == "name" {
+        print(item.value)
     }
 }
-log("Hello", "🌹")
 
-debugPrint("", 20)
 
-class Food {
-    class func ok(email: String) {
-        
-    }
-}
+
 
 
