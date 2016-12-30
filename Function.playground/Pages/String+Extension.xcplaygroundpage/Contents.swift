@@ -16,3 +16,6 @@ extension String {
 var string = "1234<user>"
 
 print(string.remove(after: "<"), string.substring(to: "<"), string.components(separatedBy: "<").first!)
+let text = "ab.c1,23"
+print(text.components(separatedBy: [".", ","]))
+print(["ab", "c1", "23"].reduce("", { $0 + $1}))
