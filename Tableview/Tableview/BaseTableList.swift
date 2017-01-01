@@ -21,7 +21,6 @@ class BaseTableList: UIViewController, UITableViewDelegate, UITableViewDataSourc
         tableView.register(TextViewCell.self, forCellReuseIdentifier: String(describing: TextViewCell.self))
         tableView.tableFooterView = UIView()
         view.addSubview(tableView)
-
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -42,6 +41,22 @@ class BaseTableList: UIViewController, UITableViewDelegate, UITableViewDataSourc
 class test: BaseTableList {
     override func viewDidLoad() {
         super.viewDidLoad()
-//        print(name)
+        let p = User().convert(by: dict)
+        print(p.name, "🌹", p.age)
+        print(p.properties)
     }
 }
+
+class Person: Object {
+    var name = ""
+    var age = 0
+    var user: User? = nil
+    
+    required override init() {}
+}
+
+class User: Person {
+    var phone = ""
+}
+
+let dict: [String: Any] = ["name": "xiaohong", "age": 20, "phone": "15201866594"]

@@ -7,5 +7,6 @@
         <page name='monad'/>
         <page name='test'/>
         <page name='String+Extension'/>
+        <page name='Reflection'/>
     </pages>
 </playground>
