@@ -16,9 +16,6 @@ func add(_ num: Int) -> (Int) -> Int {
 
 add(2)(4)
 
-mul(2)(4)
-mul(4)(5)
-
 
 func div(of a: Int) {
     print(a)
@@ -39,29 +36,24 @@ let closure = {
 }
 car = "Tesla"
 closure()
-//func print(_ values:Any...) {
-//    print(values, "🌹")
-//}
 
-struct animal {
-    
+var car3 = "Benz"
+let closure3 = {
+    car3 = "Tesla"
 }
+closure3()
+print(car3)
 
-struct Person {
-    let name: String
-    let age: Int
-}
-
-let xiaoming = Person(name: "小明", age: 10)
-let re = Mirror(reflecting: xiaoming)
-print(re.children.count)
-for (i, item) in re.children.enumerated() {
-    if let name = item.label, name == "name" {
-        print(item.value)
-    }
+func print(_ values:Any...) {
+    print(values, "🌹")
 }
 
 
+let isOk = false
+
+if isOk {
+    print("isOk")
+}
 
 
 

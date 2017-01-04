@@ -44,4 +44,3 @@ extension Dictionary {
 }
 
 let dict: [String: Any] = ["name": "xiaohong", "age": 20]
-//let p = dict.convert(to: Person())
