@@ -21,7 +21,7 @@ class BaseViewController: BaseController, UITableViewDelegate, UITableViewDataSo
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
         view.backgroundColor = UIColor.red
-        view.addSubview(tableView)
+//        view.addSubview(tableView)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
