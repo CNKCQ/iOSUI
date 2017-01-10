@@ -10,6 +10,7 @@ import Foundation
 
 class BaseGenericClass<T: Food>: BaseController {
     
+  
     override func viewDidLoad() {
         super.viewDidLoad()
     }

@@ -12,7 +12,9 @@ class SubGenericClass: GenericClass<Porridge> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(tableView.delegate, "bbb")
+//        print(tableView.delegate, "bbb")
+        
+        
         dropped(food: Porridge())
     }
     
@@ -37,5 +39,7 @@ class SubGenericClass: GenericClass<Porridge> {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
     }
+    
+    
     
 }

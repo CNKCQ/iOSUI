@@ -10,6 +10,10 @@ import UIKit
 
 class BaseController: UIViewController {
     
+    convenience init() {
+        self.init(nibName: nil, bundle: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white

@@ -36,5 +36,9 @@ class ViewController: BaseViewController {
         }
 
         print(Thread.current, "\(Thread.current) -- 🌹ta")
+        let vc = GenericClass<Porridge>()
+        vc.title = "泛型类"
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

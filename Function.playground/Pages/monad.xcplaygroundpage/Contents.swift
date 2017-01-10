@@ -3,7 +3,8 @@
 import Foundation
 
 let array = [1, 2, 3, 4]
-
+var ra = ["ni", "wo", "ta"]
+print(ra.reversed())
 let brray = array.map({"NO." + String($0)})
 
 print(brray)
@@ -30,11 +31,6 @@ print("a,b*c&d".components(separatedBy: [",","*","&"]))
 
 print(["4"].joined(separator: ","))
 
-func test(object: AnyObject) {}
 
-test(object: NSString())
-test(object: NSArray())
-test(object: barr as AnyObject)
-test(object: a as AnyObject)
-test(object: b as AnyObject)
-test(object: ["nihao": "wohao"] as AnyObject)
+
+
