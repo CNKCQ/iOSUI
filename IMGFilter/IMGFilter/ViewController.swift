@@ -33,7 +33,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func image(image: UIImage = UIImage(), type: FilterType = .normal) -> UIImage {
-        print(type.rawValue)
         // 1 - create source image
         let sourceImage = CIImage(image: image)
         
