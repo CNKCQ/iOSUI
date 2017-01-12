@@ -14,6 +14,7 @@
 		3C870D8C1E20EAD400A98B8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C870D8A1E20EAD400A98B8B /* LaunchScreen.storyboard */; };
 		3C870D991E20EC0300A98B8B /* img.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C870D981E20EC0300A98B8B /* img.jpg */; };
 		3C870DA21E20F88300A98B8B /* FilterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C870DA11E20F88300A98B8B /* FilterManager.m */; };
+		3CEE37791E277FF8003DE0BC /* CustomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CEE37781E277FF8003DE0BC /* CustomController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3C870D981E20EC0300A98B8B /* img.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img.jpg; sourceTree = "<group>"; };
 		3C870DA01E20F88300A98B8B /* FilterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterManager.h; sourceTree = "<group>"; };
 		3C870DA11E20F88300A98B8B /* FilterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterManager.m; sourceTree = "<group>"; };
+		3CEE37781E277FF8003DE0BC /* CustomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				3C870D931E20EB0700A98B8B /* IMGFilter-Bridging-Header.h */,
 				3C870DA01E20F88300A98B8B /* FilterManager.h */,
 				3C870DA11E20F88300A98B8B /* FilterManager.m */,
+				3CEE37781E277FF8003DE0BC /* CustomController.swift */,
 			);
 			path = IMGFilter;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CEE37791E277FF8003DE0BC /* CustomController.swift in Sources */,
 				3C870D841E20EAD400A98B8B /* ViewController.swift in Sources */,
 				3C870D821E20EAD400A98B8B /* AppDelegate.swift in Sources */,
 				3C870DA21E20F88300A98B8B /* FilterManager.m in Sources */,

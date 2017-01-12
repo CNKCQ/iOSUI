@@ -49,10 +49,32 @@ func findIndex<T: Equatable>(array: [T], valueToFind: T) -> Int? {
     return nil
 }
 
+func min<T: Comparable>(x: T, y: T) -> T {
+    return x < y ? x : y
+}
+
+min(4, 1)
+
 var testa = ["1", "2", "3", "4"]
 
 let idx = testa.index { e -> Bool in
     return e == "4"
 }
 
+func reverse(_ arr: inout [String]) -> [String] {
+    var s = arr.startIndex
+    var e = arr.endIndex - 1
+    while s < e {
+        let t = arr[e]
+        arr[e] = arr[s]
+        arr[s] = t
+        s += s
+        e -= e
+    }
+    return arr
+}
+
+
+//print(testa.reversed() as [String])
+print(reverse(&testa))
 doubleArray1(xs: [0, 1, 2])

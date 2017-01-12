@@ -17,7 +17,6 @@ class GenericClass<T: Rice>: BaseGenericClass<T>, UITableViewDelegate, UITableVi
         tableView = UITableView(frame: view.bounds)
         tableView.delegate = self
         tableView.dataSource = self
-        print(tableView.delegate, "aaa")
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         view.addSubview(tableView)
         
@@ -49,9 +48,17 @@ class GenericClass<T: Rice>: BaseGenericClass<T>, UITableViewDelegate, UITableVi
 
 /* 泛型总结：
 类型参数可以看做是真实类型的占位符，当泛型或者函数被使用时才会被真实类型替换。
- 
  优点：
  减少冗余代码
  提供的接口灵活
  类型安全
 */
+
+protocol genericable {
+}
+
+extension genericable where Self: GenericClass<Rice> {
+    
+}
+
+
