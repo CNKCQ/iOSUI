@@ -61,4 +61,3 @@ extension genericable where Self: GenericClass<Rice> {
     
 }
 
-
