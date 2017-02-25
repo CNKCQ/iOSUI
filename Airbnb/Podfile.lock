@@ -1,0 +1,30 @@
+PODS:
+  - Alamofire (4.3.0)
+  - AutoCycleAdview (1.0.2):
+    - Kingfisher
+  - Kingfisher (3.4.0)
+  - ObjectMapper (2.2.3)
+  - ReactiveCocoa (5.0.0):
+    - ReactiveSwift (~> 1.0.0)
+  - ReactiveSwift (1.0.0):
+    - Result (~> 3.1)
+  - Result (3.1.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - AutoCycleAdview (~> 1.0.2)
+  - ObjectMapper
+  - ReactiveCocoa
+
+SPEC CHECKSUMS:
+  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  AutoCycleAdview: ced3080f41aa8d96c5faa940749d9cb2895516c9
+  Kingfisher: 5690cfb3d1bddf3a98d679a3a34d0b7294974ed2
+  ObjectMapper: d3b3de11267f5d971f390eb8d63dd509116a4329
+  ReactiveCocoa: 60ef0da915b4f70c34ebecc3f4fb8f96af0e53d6
+  ReactiveSwift: f391724ee318a2cfd3e37dfb041cd49ecf4e7869
+  Result: 4e3ed5995ed94d0cd6a09be9a431fce3f3624bbf
+
+PODFILE CHECKSUM: c3fc488f9e5c61d0e38964deca135bb251bbd5df
+
+COCOAPODS: 1.2.0
